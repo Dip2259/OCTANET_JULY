@@ -1,1 +1,57 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <script src="https://kit.fontawesome.com/da0fde8de6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body{
+            background-image: url('./Image/backImg1.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .checked .card-title{
+            color: grey;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Welcome to MakeTodo</h1>
+    <div class="container1">
+        <div class="addTodo">
+            <p class="head">Add New Todo</p>
+            <input type="text" name="todo" id="todoInp" autocomplete="off" placeholder="What You Want to do">
+            <p class="head" style="font-size:0.9rem;">Priority</p>
+            <input type="text" name="todoPrio" id="todoInpPrio" style="width: 20%; margin: 10px 25px;" autocomplete="off"
+                placeholder="Within 1-5">
+            <button class="btn btncustom">ADD <i class="fa-solid fa-circle-plus fa-beat"
+                    style="color: #2645c9;"></i></button>
+        </div>
+        <div class="viewTodo my-2" style="width: 50%;">
+            <div class="query" style="display: flex; justify-content: flex-end;">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+                </form>
+                <select id="filter" class="p-1 mx-2">
+                    <option value="Priority">Priority</option>
+                    <option value="Ascending">Ascending</option>
+                </select>
+            </div>
+            <div class="todos">
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
